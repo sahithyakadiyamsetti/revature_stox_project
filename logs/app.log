@@ -1,0 +1,11 @@
+2025-08-05 11:30:29 [main] INFO  c.r.r.service.AnalyticsService - AnalyticsService initialized successfully
+2025-08-05 11:30:35 [main] INFO  c.r.r.service.AnalyticsService - Getting Volatility for symbol: ZEEL
+2025-08-05 12:11:38 [main] INFO  c.r.r.service.AnalyticsService - AnalyticsService initialized successfully
+2025-08-05 12:11:48 [main] INFO  c.r.r.service.AnalyticsService - Getting getvwaponly data for symbol: MARUTI
+2025-08-05 12:11:49 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 4427 records
+2025-08-05 12:12:01 [main] INFO  c.r.r.service.AnalyticsService - Getting TurnOverOnly data for symbol: ZEEL
+2025-08-05 12:12:02 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 3510 records
+2025-08-05 12:12:14 [main] INFO  c.r.r.service.AnalyticsService - Getting getMovingAveragesOnly for symbol: POWERGRID
+2025-08-05 12:12:14 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 3359 records
+2025-08-05 12:12:28 [main] INFO  c.r.r.service.AnalyticsService - Getting getMovingAveragesOnly for symbol: TATAMOTORS
+2025-08-05 12:12:28 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 4302 records
