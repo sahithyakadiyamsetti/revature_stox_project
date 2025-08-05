@@ -44,28 +44,12 @@ Core Features:
 | SQL Injection Safe | Uses PreparedStatement |
 
 Project Structure
-
-rev_stox/ ├── src/ │ 
-├── main/ │   
-│   ├── java/com/revature/rev_stox/ 
-│   │   │   ├── model/           
-# POJOs (Stock, StockAnalytics)
-│   │   │   ├── dao/               
-# DAO for JDBC logic 
-│   │   │  ├── service/           
-# Service layer 
-│   │   │   ├── util/
-# DBConnection utility 
-│   │   │   └── AnalyticsMenu.java  
-# CLI Menu 
-│   │   └── resources/ 
-│   │       ├── db.properties       
-# DB Config file │
-│       └── logback.xml         
-# Logging config 
-├── pom.xml                         
-# Maven config 
-└── README.md
+com.revature.rev_stox
+├── model/ → Stock, DailyPrice, StockAnalytics (POJOs)
+├── dao/ → AnalyticsDAO.java (JDBC queries)
+├── service/ → AnalyticsService.java (business logic)
+├── util/ → DBConnection.java (DB utility)
+└── AnalyticsMenu.java → CLI menu (main class)
 
 How to Run
 ------------------------------------------------------------------------
@@ -166,5 +150,5 @@ Logging (SLF4J + Logback)
 Git Integration
 Clean Java Architecture	
 Exception Handling	
-README 
+
 
