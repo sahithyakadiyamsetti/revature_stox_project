@@ -19,8 +19,8 @@ public class AnalyticsMenu {
             System.out.println("1. View Volatility");
             System.out.println("2. View VWAP");
             System.out.println("3. View Turnover");
-            System.out.println("4. View Moving Averages (7 & 30 days)");
-            System.out.println("5.View Full Analytics");
+            System.out.println("4. View Moving Averages");
+            System.out.println("5. view full analytics: ");
             System.out.println("6. Exit");
             System.out.println("Enter your choice(1-6): ");
             String choice = scanner.nextLine().trim();
@@ -35,7 +35,7 @@ public class AnalyticsMenu {
                 case "2" -> {
                     System.out.println("Enter stock symbol (e.g: ZEEL, BAJFINANCE, TATAMOTORS, MARUTI, POWERGRID): ");
                     String symbol = scanner.nextLine().toUpperCase();
-                    List<StockAnalytics> analyticsList = service.getvwapOnly(symbol);
+                    List<StockAnalytics> analyticsList = service.getVwapOnly(symbol);
                     displayAnalytics(analyticsList, symbol, "VWAP only");
                 }
                 case "3" -> {
@@ -54,11 +54,11 @@ public class AnalyticsMenu {
                 case "5" -> {
                     System.out.println("Enter stock symbol: ");
                     String symbol = scanner.nextLine().toUpperCase();
-                    List<StockAnalytics> analyticsList = service.getMovingAveragesOnly(symbol);
+                    List<StockAnalytics> analyticsList = service.getFullAnalytics(symbol);
                     displayAnalytics(analyticsList, symbol, "Full Analytics");
                 }
                 case "6" -> {
-                    System.out.println("Existing Rev_Stox analytics. Thank You!!!!!!!!!!!");
+                    System.out.println("Exiting Rev_Stox analytics. Thank You!!!!!!!!!!!");
                     return;
                 }
                 default -> System.out.println("Invalid choice.please enter a number in between 1 and 5.");
@@ -78,12 +78,11 @@ public class AnalyticsMenu {
         printHeader();
 
         for (StockAnalytics a : list) {
-            System.out.printf("%-10s | %-12s | %-10.2f | %-15.2f | %-15.2f | %-12.2f | %-12.2f%n",
+            System.out.printf("%-10s | %-12s | %-10.2f | %-15.2f | %-12.2f | %-12.2f%n",
                     a.getSymbol(),
                     a.getTradeDate(),
                     a.getVolatility(),
-                    a.getMovingAvg7(),
-                    a.getMovingAvg30(),
+                    a.getMovingAvg(),
                     a.getVwap(),
                     a.getTurnover());
         }
@@ -91,8 +90,8 @@ public class AnalyticsMenu {
     private static void printHeader() {
 
         System.out.println("-------------------------------------------------------------------------");
-        System.out.printf("%-10s | %-12s | %-10s | %-15s | %-15s | %-10s | %-10s%n",
-                "Symbol", "Trade date", "Volatility", "MovingAvg-7", "MovingAvg-30", "VWAP", "Turnover");
+        System.out.printf("%-10s | %-12s | %-10s | %-15s | %-10s | %-10s%n",
+                "Symbol", "Trade date", "Volatility", "MovingAvg", "VWAP", "Turnover");
         System.out.println("---------------------------------------------------------------------------");
     }
 }

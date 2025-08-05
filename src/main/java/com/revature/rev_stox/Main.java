@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Stocks From The Database");
         }
         for (Stock s : stocks) {
-            System.out.println(s.getSymbol() + " ------ " + s.getCompanyName());
+            System.out.println(s.getSymbol() + " ------ " +s.getCompanyName());
         }
     }
 }

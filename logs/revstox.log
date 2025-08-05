@@ -1,0 +1,6 @@
+2025-08-05 15:05:59 [main] INFO  c.r.r.service.AnalyticsService - AnalyticsService initialized successfully
+2025-08-05 15:06:07 [main] INFO  c.r.r.service.AnalyticsService - Getting Volatility for symbol: ZEEL
+2025-08-05 15:06:08 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 3510 records
+2025-08-05 15:08:22 [main] INFO  c.r.r.service.AnalyticsService - AnalyticsService initialized successfully
+2025-08-05 15:09:26 [main] INFO  c.r.r.service.AnalyticsService - Getting Volatility for symbol: ZEEL
+2025-08-05 15:09:26 [main] INFO  c.revature.rev_stox.dao.AnalyticsDAO - Volatility data fetched : 3510 records

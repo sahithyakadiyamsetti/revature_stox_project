@@ -8,42 +8,43 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 public class AnalyticsService {
+
     private static final Logger logger = LoggerFactory.getLogger(AnalyticsService.class);
-    private final AnalyticsDAO AnalyticsDAO;
+    private final AnalyticsDAO analyticsDAO;
 
     public AnalyticsService() {
-        this.AnalyticsDAO = new AnalyticsDAO();
+        this.analyticsDAO = new AnalyticsDAO();
         logger.info("AnalyticsService initialized successfully");
     }
 
-    // full analytics
+    // Full analytics
     public List<StockAnalytics> getFullAnalytics(String symbol) {
-        logger.info("Getting getFullAnalytics data for symbol: {}", symbol);
-        return AnalyticsDAO.getVolatility(symbol);
+        logger.info("Getting full analytics for symbol: {}", symbol);
+        return analyticsDAO.getFullanalytics(symbol);
     }
 
-    // vwap
-    public List<StockAnalytics>getvwapOnly(String symbol) {
-        logger.info("Getting getvwaponly data for symbol: {}", symbol);
-        return AnalyticsDAO.getVolatility(symbol);
+    // VWAP only
+    public List<StockAnalytics> getVwapOnly(String symbol) {
+        logger.info("Getting VWAP data for symbol: {}", symbol);
+        return analyticsDAO.vwap(symbol);
     }
 
-    // turnover
-    public List<StockAnalytics>getTurnOverOnly(String symbol) {
-       logger.info("Getting TurnOverOnly data for symbol: {}", symbol);
-        return AnalyticsDAO.getVolatility(symbol);
+    // Turnover only
+    public List<StockAnalytics> getTurnOverOnly(String symbol) {
+        logger.info("Getting turnover data for symbol: {}", symbol);
+        return analyticsDAO.getTurnover(symbol);
     }
 
-    //to get only volatility
+    // Volatility only
     public List<StockAnalytics> getVolatilityOnly(String symbol) {
-        logger.info("Getting Volatility for symbol: {}", symbol);
-        return AnalyticsDAO.getVolatility(symbol);
+        logger.info("Getting volatility data for symbol: {}", symbol);
+        return analyticsDAO.getVolatility(symbol);
     }
 
-
-    //to get only moving averages
+    // Moving averages only
     public List<StockAnalytics> getMovingAveragesOnly(String symbol) {
-        logger.info("Getting getMovingAveragesOnly for symbol: {}", symbol);
-        return AnalyticsDAO.getVolatility(symbol);
+        logger.info("Getting moving averages for symbol: {}", symbol);
+        return analyticsDAO.getMovingAverage(symbol);
     }
+
 }
